@@ -77,7 +77,7 @@ class DefaultBookmarkController(
         val flags = EngineSession.LoadUrlFlags.select(EngineSession.LoadUrlFlags.ALLOW_JAVASCRIPT_URL)
         openInNewTabAndShow(
             item.url!!,
-            true,
+            false, // See https://github.com/mozilla-mobile/fenix/issues/13336
             BrowserDirection.FromBookmarks,
             activity.browsingModeManager.mode,
             flags
